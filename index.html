@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブロックブラスト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ブロックブラスト</h1>
+
+    <div id="mainMenu" class="screen">
+        <h2>ステージ選択</h2>
+        <button id="startButtonStage1">ステージ1をプレイ</button>
+        <button id="startButtonStage2">ステージ2をプレイ</button>
+    </div>
+
+    <div id="gameScreen" class="screen hidden">
+        <div id="gameContainer">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div id="gameStatus" class="hidden">
+                <span id="statusMessage"></span>
+                <button id="restartButton">もう一度プレイ</button>
+                <button id="nextStageButton" class="hidden">ステージ2へ進む</button>
+                <button id="backToMenuButton" class="hidden">メニューに戻る</button>
+            </div>
+        </div>
+        <p class="score">スコア: <span id="scoreDisplay">0</span></p>
+    </div>
+
+    <audio id="breakSound" src="sounds/break.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
